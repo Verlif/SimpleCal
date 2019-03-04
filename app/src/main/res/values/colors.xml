@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="number">#FFFFFF</color>
+    <color name="operator">#C1F9FF</color>
+    <color name="equals">#D5D5D5</color>
+    <color name="clear">#FCC4C4</color>
+</resources>
