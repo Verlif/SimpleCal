@@ -66,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
         }
         //数字按下
         else {
+            if (result != null)
+                clear(view);
             if (cal == null) {
                 if (first == null)
                     first = Long.valueOf(0);
