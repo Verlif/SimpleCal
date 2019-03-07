@@ -213,7 +213,6 @@
                     android:layout_width="@dimen/button_width"
                     android:layout_height="@dimen/button_height"
                     android:layout_weight="1"
-                    android:textSize="20sp"
                     android:background="@color/point"
                     android:onClick="point"
                     android:text="." />
