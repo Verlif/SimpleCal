@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    final static long MAX = 100000000;
+
     Long first;
     Long next;
     Long result;
@@ -78,13 +80,26 @@ public class MainActivity extends AppCompatActivity {
                     next = null;
                     result = null;
                 } else if (cal == null) {
-                    first *= 10;
-                    first += Integer.valueOf(value);
+                    if (first > MAX) {
+                        Toast.makeText(this, "this number is too large", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    else {
+                        first *= 10;
+                        first += Integer.valueOf(value);
+                    }
                 } else {
                     if (next == null)
                         next = 0L;
-                    next *= 10;
-                    next += Integer.valueOf(value);
+
+                    if (next > MAX) {
+                        Toast.makeText(this, "this number is too large", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    else {
+                        next *= 10;
+                        next += Integer.valueOf(value);
+                    }
                 }
                 //显示框显示
                 textView.append(value);
