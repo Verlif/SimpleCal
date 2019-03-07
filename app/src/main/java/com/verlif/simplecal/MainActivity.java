@@ -11,8 +11,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final static long MAX = 100000000;
-
     private double first;
     private double next;
     private double result;
@@ -240,8 +238,6 @@ public class MainActivity extends AppCompatActivity {
      * 从变量@params first和运算符@params cal以及变量@params next中求取结果，并将first置为null
      */
     private void getResult() {
-        if (first > MAX || next > MAX)
-            Toast.makeText(this, "this result maybe overflow", Toast.LENGTH_SHORT).show();
         switch (cal) {
             case "+":
                 result = first + next;
