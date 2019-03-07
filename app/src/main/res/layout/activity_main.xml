@@ -13,8 +13,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/input"
-            android:gravity="right|bottom"
-            android:hint="@string/app_name"
+            android:gravity="end|bottom"
+            android:hint="@string/default_show"
             android:padding="10dp"
             android:textSize="@dimen/text_size"
             android:fontFamily="sans-serif-black"
@@ -34,9 +34,45 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/sqrt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/operator"
+                    android:onClick="square"
+                    android:text="^2" />
+
+
+                <Button
+                    android:id="@+id/clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/clear"
+                    android:onClick="clear"
+                    android:text="@string/clear" />
+
+
+                <Button
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/number"
+                    android:onClick="back"
+                    android:text="@string/back" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
                     android:id="@+id/plus"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_gravity="fill_horizontal"
                     android:layout_weight="1"
                     android:background="@color/operator"
@@ -46,7 +82,7 @@
                 <Button
                     android:id="@+id/N1"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/number"
                     android:onClick="run"
@@ -55,7 +91,7 @@
                 <Button
                     android:id="@+id/N2"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/number"
                     android:onClick="run"
@@ -64,7 +100,7 @@
                 <Button
                     android:id="@+id/N3"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/number"
                     android:onClick="run"
@@ -80,7 +116,7 @@
                 <Button
                     android:id="@+id/minus"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/operator"
                     android:onClick="run"
@@ -89,7 +125,7 @@
                 <Button
                     android:id="@+id/N4"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/number"
                     android:onClick="run"
@@ -98,7 +134,7 @@
                 <Button
                     android:id="@+id/N5"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/number"
                     android:onClick="run"
@@ -107,7 +143,7 @@
                 <Button
                     android:id="@+id/N6"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/number"
                     android:onClick="run"
@@ -123,7 +159,7 @@
                 <Button
                     android:id="@+id/multiply"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/operator"
                     android:onClick="run"
@@ -132,7 +168,7 @@
                 <Button
                     android:id="@+id/N7"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/number"
                     android:onClick="run"
@@ -141,7 +177,7 @@
                 <Button
                     android:id="@+id/N8"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/number"
                     android:onClick="run"
@@ -150,7 +186,7 @@
                 <Button
                     android:id="@+id/N9"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/number"
                     android:onClick="run"
@@ -166,25 +202,26 @@
                 <Button
                     android:id="@+id/divide"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/operator"
                     android:onClick="run"
                     android:text="/" />
 
                 <Button
-                    android:id="@+id/empty"
+                    android:id="@+id/point"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@color/clear"
-                    android:onClick="clear"
-                    android:text="Clear" />
+                    android:textSize="20sp"
+                    android:background="@color/point"
+                    android:onClick="point"
+                    android:text="." />
 
                 <Button
                     android:id="@+id/N0"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/number"
                     android:onClick="run"
@@ -193,7 +230,7 @@
                 <Button
                     android:id="@+id/equal"
                     android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/equals"
                     android:onClick="run"

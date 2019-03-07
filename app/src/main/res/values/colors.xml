@@ -5,6 +5,8 @@
     <color name="colorAccent">#D81B60</color>
     <color name="number">#FFFFFF</color>
     <color name="operator">#C1F9FF</color>
-    <color name="equals">#D5D5D5</color>
-    <color name="clear">#FCC4C4</color>
+    <color name="back">#FF9800</color>
+    <color name="equals">#03A9F4</color>
+    <color name="clear">#F44336</color>
+    <color name="point">#B1B1B1</color>
 </resources>
