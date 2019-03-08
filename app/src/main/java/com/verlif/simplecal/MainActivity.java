@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                     case 2:             //一般运算判定
                         break;
                     case 3:             //连等判定
+                        if (cal == null)
+                            return;
                         //自动补全符号和第二位
                         textView.append(cal);
                         textView.append(next + "");
@@ -161,6 +163,24 @@ public class MainActivity extends AppCompatActivity {
         }
         textView.append(cal + next);
         getResult();
+        displayResult();
+        inputState = 3;
+    }
+
+    public void sqrt(View view) {
+        switch (inputState) {
+            case 1:                 //用第一个数平方，忽略后面的运算符
+                back(view);
+            case 0:
+                result = Math.sqrt(first);
+                break;
+            case 2:                 //先计算前面的运算，在用结果平方
+                getResult();
+                displayResult();
+            case 3:                 //用结果平方
+                result = Math.sqrt(result);
+                break;
+        }
         displayResult();
         inputState = 3;
     }

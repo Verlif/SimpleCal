@@ -6,4 +6,5 @@
     <string name="default_show">SimpleCal</string>
     <string name="clear">clear</string>
     <string name="back">back</string>
+    <string name="sqrt">sqrt</string>
 </resources>

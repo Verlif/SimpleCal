@@ -6,4 +6,5 @@
     <string name="default_show">等待输入</string>
     <string name="clear">清除</string>
     <string name="back">回退</string>
+    <string name="sqrt">开根</string>
 </resources>

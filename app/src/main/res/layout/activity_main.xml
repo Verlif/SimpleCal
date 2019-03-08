@@ -34,7 +34,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/sqrt"
+                    android:id="@+id/square"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/button_height"
                     android:layout_weight="1"
@@ -42,6 +42,14 @@
                     android:onClick="square"
                     android:text="^2" />
 
+                <Button
+                    android:id="@+id/sqrt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_weight="1"
+                    android:background="@color/operator"
+                    android:onClick="sqrt"
+                    android:text="sqrt" />
 
                 <Button
                     android:id="@+id/clear"
