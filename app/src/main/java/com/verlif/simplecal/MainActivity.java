@@ -144,9 +144,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void square(View view) {
         switch (inputState) {
-            case 0:
             case 1:                 //用第一个数平方，忽略后面的运算符
                 back(view);
+            case 0:
                 next = first;
                 cal = "*";
                 break;
