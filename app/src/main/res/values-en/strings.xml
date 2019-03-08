@@ -2,6 +2,8 @@
     <string name="app_name">SimpleCal</string>
     <string name="no_first_number_tip">no first number</string>
     <string name="illegal_input_tip">Illegal input, please check the input</string>
+    <string name="no_result_tip">No result is selected</string>
+    <string name="copy_success_tip_and_result">Copy result:</string>
 
     <string name="default_show">SimpleCal</string>
     <string name="clear">clear</string>

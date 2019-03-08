@@ -2,6 +2,8 @@
     <string name="app_name">计算器</string>
     <string name="no_first_number_tip">请输入第一个数字</string>
     <string name="illegal_input_tip">错误的输入，请重新输入</string>
+    <string name="no_result_tip">没有结果可以复制</string>
+    <string name="copy_success_tip_and_result">已复制结果:</string>
 
     <string name="default_show">等待输入</string>
     <string name="clear">清除</string>

@@ -1,5 +1,7 @@
 package com.verlif.simplecal;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -37,6 +39,13 @@ public class MainActivity extends AppCompatActivity {
         resetDecimal();
 
         textView.setMovementMethod(ScrollingMovementMethod.getInstance());              //设置滚动条
+        textView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                clipBoardCopy(v);
+                return false;
+            }
+        });
     }
 
     public void run(View view) {
@@ -183,6 +192,17 @@ public class MainActivity extends AppCompatActivity {
         }
         displayResult();
         inputState = 3;
+    }
+
+    public void clipBoardCopy(View view) {
+        if (inputState == 3) {
+            ClipboardManager cm = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+            cm.setPrimaryClip(ClipData.newPlainText("result", String.valueOf(result)));
+            Toast.makeText(this, getResources().getString(R.string.copy_success_tip_and_result) + result, Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(this, getResources().getString(R.string.no_result_tip), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void back(View view) {
